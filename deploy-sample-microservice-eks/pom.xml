@@ -31,7 +31,7 @@
         <groupId>org.apache.maven.plugins</groupId><artifactId>maven-assembly-plugin</artifactId>
         <executions>
           <execution>
-            <goals><goal>attached</goal></goals><phase>package</phase>
+            <goals><goal>single</goal></goals><phase>package</phase>
             <configuration>
               <finalName>eksExample</finalName>
               <descriptorRefs><descriptorRef>jar-with-dependencies</descriptorRef></descriptorRefs>
