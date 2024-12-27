@@ -3,12 +3,14 @@ kind: Ingress
 metadata:
   name: "java-microservice-ingress"
   annotations:
+    # Warning: annotation "kubernetes.io/ingress.class" is deprecated, please use 'spec.ingressClassName' instead
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/load-balancer-name: apg2
     alb.ingress.kubernetes.io/target-type: ip
   labels:
     app: java-microservice
 spec:
+  ingressClassName: alb
   rules:
     - http:
         paths:
